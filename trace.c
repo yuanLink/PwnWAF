@@ -29,7 +29,7 @@ int check_standard(int fd){
 }
 
 void write_log(pid_t pid, char* addr, int size, enum SYSTYPE flag){
-	int fd = open(LOGNAME, O_CREAT|O_APPEND|O_WRONLY, 0600);
+	int fd = open(LOGNAME, O_CREAT|O_APPEND|O_WRONLY, 0666);
 	int i = 0,j = 0;
 	long data;
 	char* buf = (char*)malloc((size+1)*sizeof(long));
